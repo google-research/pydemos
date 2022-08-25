@@ -1,0 +1,63 @@
+{
+  "name": "streamlit_plotly_event_handler",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plotly Event Handler to add interactivity in Streamlit",
+  "author": {
+    "name": "Alex Serrano Terré",
+    "email": "alexserrano@google.com"
+  },
+  "contributors": [
+    {
+      "name": "Diego Sanmartin",
+      "email": "dsanmart@google.com"
+    }
+  ],
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "joi": "^17.6.0",
+    "plotly.js": "^2.14.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-plotly.js": "^2.4.0",
+    "streamlit-component-lib": "^1.2.0",
+    "typescript": "^3.8.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
+    "react-scripts": "^4.0.3",
+    "@types/plotly.js": "^1.54.22",
+    "@types/react-plotly.js": "^2.5.1"
+  },
+  "overrides": {
+    "@svgr/webpack": "$@svgr/webpack"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "."
+}

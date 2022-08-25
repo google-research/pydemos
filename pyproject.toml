@@ -20,8 +20,8 @@ dependencies = []
 dynamic = ["version"]
 
 [project.urls]
-homepage = "https://github.com/google-research/pydemos"
-repository = "https://github.com/google-research/pydemos"
+homepage = "https://github.com/googlestaging/pydemos"
+repository = "https://github.com/googlestaging/pydemos"
 # Other: `documentation`, `changelog`
 
 [project.optional-dependencies]
