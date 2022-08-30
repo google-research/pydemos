@@ -1,0 +1,1 @@
+recursive-include src/streamlit_image_carousel/frontend/public/build *
