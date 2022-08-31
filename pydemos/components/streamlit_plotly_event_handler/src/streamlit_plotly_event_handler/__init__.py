@@ -23,7 +23,7 @@ import streamlit.components.v1 as components
 
 # RELEASE constant, set to False during development to use node dev server,
 # set to True on production to use component built version.
-_RELEASE = False
+_RELEASE = True
 
 if not _RELEASE:
   # `declare_component` returns a function that is used to create

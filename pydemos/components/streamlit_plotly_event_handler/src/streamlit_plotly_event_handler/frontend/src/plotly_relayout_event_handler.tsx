@@ -32,7 +32,7 @@ interface State {
   data: reactPlotly.Figure['data'];
   layout: reactPlotly.Figure['layout'];
   config: reactPlotly.PlotParams['config'];
-  frames: reactPlotly.Figure['frames'];
+  frames: reactPlotly.PlotParams['frames'];
 }
 
 class PlotlyRelayoutEventHandler extends StreamlitComponentBase<State> {
@@ -57,7 +57,7 @@ class PlotlyRelayoutEventHandler extends StreamlitComponentBase<State> {
         frames={this.state.frames}
         // Set plot state on initialization and keep it updated on changes.
         onInitialized={() => this.setState(plotObj)}
-        onUpdate={figure => this.setState(figure)}
+        onUpdate={figure => this.setState((figure as State))}
         // Relayout event handler.
         onRelayout={(data: Partial<reactPlotly.PlotParams['layout']>) => {
           this.relayoutEventHandler(data);
