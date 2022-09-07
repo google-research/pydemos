@@ -28,6 +28,7 @@ repository = "https://github.com/google-research/pydemos"
 # Development deps (unittest, linting, formating,...)
 # Installed through `pip install .[dev]`
 dev = [
+    "absl-py",
     "pytest",
     "pytest-xdist",
     "pylint>=2.6.0",
