@@ -1,0 +1,8 @@
+clip@git+https://github.com/openai/CLIP.git@f69a9bc217f6df9213628848b3f9b0b6fc542401
+imageio==2.21.2
+plotly==5.10.0
+pydemos@git+https://github.com/google-research/pydemos
+scenic@git+https://github.com/google-research/scenic.git@a1e72b559881f29eb305372f5e4a7883808d0a4c
+scikit-image==0.19.3
+st-annotated-text==3.0.0
+streamlit==1.12.2
