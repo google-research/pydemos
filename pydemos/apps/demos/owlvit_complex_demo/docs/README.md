@@ -11,9 +11,6 @@ Report errors and bugs or suggest new features [here](https://docs.google.com/do
 
 ## Example
 
-<!-- TODO(alexserrano): change to external link before publishing to Github. -->
-**Running instance in:** [go/owlvit-demo](go/owlvit-demo)
-
 <img src="assets/text_conditioned.gif"  width="600" height="500">
 <img src="assets/image_conditioned.gif"  width="600" height="500">
 
