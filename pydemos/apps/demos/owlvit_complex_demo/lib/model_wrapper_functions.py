@@ -15,8 +15,6 @@
 """Utiliy functions to interact with the model.
 
 Contains functions to load the model and apply it to text or image query.
-
-TODO(alexserrano): rename module to `model_wrapper_functions.py`.
 """
 
 from typing import Tuple

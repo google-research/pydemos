@@ -21,7 +21,7 @@ paper.
 import annotated_text
 import imageio.v2 as imageio
 from lib import inference
-from lib import model_utils
+from lib import model_wrapper_functions
 from lib import paper
 from lib import plotting
 import numpy as np
@@ -103,7 +103,7 @@ def run_text_conditioned_demo() -> inference.Model:
 
     # Instantiates model.
     with st.spinner("Warming up the model. Doing `jit` compilation"):
-      model = model_utils.load_model()
+      model = model_wrapper_functions.load_model()
 
     st.info("Select an image to use as target here: ", icon="🎯")
     selection = streamlit_image_carousel.image_carousel(
@@ -137,7 +137,7 @@ def run_text_conditioned_demo() -> inference.Model:
     with right:
       with st.spinner("Embedding image and queries..."):
         # Get image with bboxes and query legend html text.
-        result, legend_html_text = model_utils.apply_model_to_text_query(
+        result, legend_html_text = model_wrapper_functions.apply_model_to_text_query(
             text_input, image, model, threshold)
       st.plotly_chart(result, config={"staticPlot": True})
 
@@ -202,10 +202,10 @@ def run_image_conditioned_demo(model: inference.Model):
       # Attach event handler to the plot and get boxes (event data).
       box = streamlit_plotly_event_handler.relayout_event_handler(
           plot=plotly_query_fig, override_height=600)
-      model_utils.normalize_boxes(box, model)
+      model_wrapper_functions.normalize_boxes(box, model)
 
     # Applies model to image query.
-    plotly_target_fig = model_utils.apply_model_to_image_query(
+    plotly_target_fig = model_wrapper_functions.apply_model_to_image_query(
         query_image=query_image,
         target_image=target_image,
         query_box=box,
