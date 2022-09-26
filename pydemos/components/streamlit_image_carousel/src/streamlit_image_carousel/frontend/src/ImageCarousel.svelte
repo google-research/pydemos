@@ -4,23 +4,25 @@
   setStreamlitLifecycle();
 
   // Access arguments sent from Streamlit
-  export let image_list: string[];
+  export let image_list: [string, string, string][];
   export let scroller_height: number;
 
-  let selectedImageUrl: string;
-
   function onClickEventHandler(event: any) {
-    selectedImageUrl = event.srcElement.currentSrc;
+    const selectedImageUrl = event.srcElement.currentSrc;
     Streamlit.setComponentValue(selectedImageUrl);
   }
 </script>
 
 <div class="scroller">
-  {#each image_list as imageUrl}
+  {#each image_list as [imageUrl, imageAttribution, imageLicense]}
+    <!-- Disable error since we have a rendundant alt in case of bad URL -->
+    <!-- svelte-ignore a11y-img-redundant-alt -->
     <img
       src={imageUrl}
       id={imageUrl}
       alt="Image URL unavailable"
+      data-image-attribution={imageAttribution}
+      data-image-license={imageLicense}
       style="height: {scroller_height}px;"
       on:click={onClickEventHandler}
     />

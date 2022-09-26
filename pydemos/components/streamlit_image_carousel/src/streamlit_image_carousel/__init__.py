@@ -16,10 +16,13 @@
 
 When clicking an image from the carousel, its URL will be returned as the
 component value.
+
+TODO(alexserrano): Update build files in frontend/public/build.
 """
 
+import collections
 import os
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 import streamlit.components.v1 as components
 
@@ -42,17 +45,23 @@ else:
   _component_func = components.declare_component(
       "image_carousel", path=build_dir)
 
+ImageAttributes = collections.namedtuple("ImageAttributes",
+                                         ["url", "attribution", "license"])
+
 
 # We create a custom wrapper function that will serve as our component's
 # public API, instead of exposing the `declare_component` function.
-def image_carousel(image_list: List[str],
+def image_carousel(image_list: List[ImageAttributes],
                    scroller_height: int = 200,
                    index: int = 0,
                    key: Optional[str] = None) -> str:
   """Creates a new instance of "image_carousel" component.
 
   Args:
-    image_list: List of URL strings of images to display.
+    image_list: List of tuples with image attributes. The first element is the
+      image URL, second is the image attribution string, and third, the image
+      license. The last two will be embedded as image annotations using
+      HTMLElement.dataset. Example: ("{image url}", "Photo by John Doe", "CC0").
     scroller_height: Integer describing height in px of the image scroller.
       Defaults to 200px.
     index: The index in `image_list` of the preselected option on first render.
@@ -69,7 +78,7 @@ def image_carousel(image_list: List[str],
       image_list=image_list,
       scroller_height=scroller_height,
       key=key,
-      default=image_list[index]
+      default=image_list[index].url
   )  # Default return value, image URL in position `index` of `image_list`.
 
   return component_value
