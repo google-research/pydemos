@@ -47,6 +47,7 @@ else:
 # public API, instead of exposing the `declare_component` function.
 def image_carousel(image_list: List[str],
                    scroller_height: int = 200,
+                   index: int = 0,
                    key: Optional[str] = None) -> str:
   """Creates a new instance of "image_carousel" component.
 
@@ -54,19 +55,21 @@ def image_carousel(image_list: List[str],
     image_list: List of URL strings of images to display.
     scroller_height: Integer describing height in px of the image scroller.
       Defaults to 200px.
+    index: The index in `image_list` of the preselected option on first render.
     key: An optional string that uniquely identifies this component. If this is
       None, and the component's arguments are changed, the component will be
       re-mounted in the Streamlit frontend and lose its current state.
 
   Returns:
     The URL link of the last clicked image in the scroller. Returned as a
-    string.
+    string. Defaults to the image URL in position `index` of `image_list`.
   """
 
   component_value = _component_func(
       image_list=image_list,
       scroller_height=scroller_height,
       key=key,
-      default="")  # Default, return empty string (empty URL)
+      default=image_list[index]
+  )  # Default return value, image URL in position `index` of `image_list`.
 
   return component_value
