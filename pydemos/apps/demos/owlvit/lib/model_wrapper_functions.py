@@ -105,7 +105,9 @@ def apply_model_to_image_query(
   interactive.IMAGE_COND_NMS_IOU_THRESHOLD = 0.7
 
   if not query_box:
-    return plotting.create_image_figure(model.preprocess_image(target_image))
+    plotly_target_fig, _ = plotting.create_image_figure(
+        model.preprocess_image(target_image))
+    return plotly_target_fig
 
   _, _, boxes = model.embed_image(target_image)
 

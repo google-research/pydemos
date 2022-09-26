@@ -191,7 +191,7 @@ def run_image_conditioned_demo(model: inference.Model):
       target_image = np.array(Image.open(img_cond_buffer_target))
 
   if query_image is not None and target_image is not None:
-    plotly_query_fig = plotting.create_image_figure(
+    plotly_query_fig, _ = plotting.create_image_figure(
         model.preprocess_image(query_image))
     plotly_query_fig.update_layout(
         dragmode="drawrect",
