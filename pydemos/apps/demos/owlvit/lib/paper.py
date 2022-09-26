@@ -29,7 +29,6 @@ def abstract():
     Aravindh Mahendran, Anurag Arnab, Mostafa Dehghani, Zhuoran Shen,\
     Xiao Wang, Xiaohua Zhai, Thomas Kipf, and Neil Houlsby</p>',
       unsafe_allow_html=True)
-  st.subheader('Abstract')
   st.markdown(
       '<p align="justify">Combining simple architectures with large-scale pre-training\
         has led to massive improvements in image classification. For object detection,\

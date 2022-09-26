@@ -18,7 +18,6 @@ Contains text and image conditioned detection and a summary of the OWL-ViT
 paper.
 """
 
-import annotated_text
 import imageio.v2 as imageio
 from lib import inference
 from lib import model_wrapper_functions
@@ -55,25 +54,6 @@ st.markdown(
 # Abstract section
 paper.abstract()
 
-# Keywords section
-keyword_colors = {
-    "blue": "#b3cefb",
-    "red": "#f1b4af",
-    "yellow": "#ffe395",
-    "green": "#84f3bd"
-}
-st.subheader("Keywords")
-annotated_text.annotated_text(
-    (" open-vocabulary detection transformer", "", keyword_colors["blue"]), " ",
-    (" vision transformer", "", keyword_colors["red"]), " ",
-    (" zero-shot detection", "", keyword_colors["yellow"]), " ",
-    (" image-conditioned detection", "", keyword_colors["blue"]), " ",
-    (" one-shot object detection", "", keyword_colors["green"]), " ",
-    (" contrastive learning", "", keyword_colors["red"]), " ",
-    (" image-text models", "", keyword_colors["yellow"]), " ",
-    (" foundation models", "", keyword_colors["green"]), " ",
-    (" CLIP", "", keyword_colors["blue"]))
-
 # Constant list of image URLs showcased in the carousels
 IMAGE_URL_LIST = [
     ("https://burst.shopifycdn.com/photos/healthy-breakfast-time.jpg?width=925&format=pjpg&exif=1&iptc=1",
@@ -109,7 +89,14 @@ def run_text_conditioned_demo() -> inference.Model:
       Warmed up instance of `inference.Model`.
   """
 
-  st.subheader("Text Conditioned Demo")
+  st.subheader("Text Conditioned Inference")
+
+  st.write("One way to use OWL-ViT is by text conditioning; it will find "
+           "bounding boxes matching queries written in plain text. This "
+           "achieved state-of-the-art AP on LVIS, which contains many 'rare' "
+           "classes. You can try this below with one of our smaller CLIP-based "
+           "models.")
+
   target_tab, upload_tab = st.tabs(
       ["Choose the target image", "Upload the target image"])
 
@@ -122,7 +109,6 @@ def run_text_conditioned_demo() -> inference.Model:
     with st.spinner("Warming up the model. Doing `jit` compilation"):
       model = model_wrapper_functions.load_model()
 
-    st.info("Select an image to use as target here: ", icon="🎯")
     selection = streamlit_image_carousel.image_carousel(
         image_list=IMAGE_URL_LIST, scroller_height=200, key="text")
     if selection:
@@ -172,7 +158,11 @@ def run_image_conditioned_demo(model: inference.Model):
     model: Warmed up instance of inference model.
   """
 
-  st.subheader("Image Conditioned Demo")
+  st.subheader("Image Conditioned Inference")
+
+  st.write("Another way to use OWL-ViT is image-conditioning, which we used "
+           "for one-shot object detection to achieve state of the art "
+           "performance on the COCO dataset.")
 
   query_tab, query_upload_tab = st.tabs(
       ["Choose the query image", "Upload the query image"])
