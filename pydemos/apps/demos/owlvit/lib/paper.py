@@ -51,7 +51,7 @@ def abstract():
 
 
 def introduction():
-  """Returns abstract."""
+  """Returns introduction."""
   st.subheader('Introduction')
   st.markdown(
       '<p align="justify">Object detection is a fundamental task in computer vision. Until recently, detection models were typically limited to a small, fixed set of semantic categories, \
@@ -94,7 +94,7 @@ research on tasks requiring open-vocabulary localization. We call our method \
 
 
 def related_work():
-  """Returns abstract."""
+  """Returns related work section."""
   st.subheader('Related Work')
   st.markdown(
       '<p align="justify"><b>Contrastive Vision-Language Pre-Training.</b>The idea of embedding images and text into a shared space has been used to achieve “zero-shot” generalization \
@@ -130,7 +130,7 @@ text-derived embeddings as queries. Recent prior works on this problem have focu
 
 
 def method():
-  """Returns abstract."""
+  """Returns method section."""
   st.subheader('Method')
   st.markdown(
       '<p align="justify">Our goal is to create a simple and scalable open-vocabulary object detector. We \
@@ -218,7 +218,7 @@ of the parameters of the model.\
 
 
 def experiments():
-  """Returns abstract."""
+  """Returns experiments section."""
   st.subheader('Experiments')
   with st.expander('4.1. Model Details'):
     st.markdown('<p align="justify"></p>', unsafe_allow_html=True)
@@ -246,7 +246,7 @@ def experiments():
 
 
 def conclusion():
-  """Returns abstract."""
+  """Returns conclusion section."""
   st.subheader('Conclusion')
   st.markdown(
       '<p align="justify">We presented a simple recipe for transferring contrastively trained image-text \
@@ -267,7 +267,7 @@ deduplication code, and Yi Tay for useful advice.</p>',
 
 
 def references():
-  """Returns abstract."""
+  """Returns references section."""
   st.subheader('References')
   with st.expander('Expand'):
     st.markdown(
