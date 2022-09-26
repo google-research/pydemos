@@ -194,7 +194,17 @@ def run_image_conditioned_demo(model: inference.Model):
     plotly_query_fig = plotting.create_image_figure(
         model.preprocess_image(query_image))
     plotly_query_fig.update_layout(
-        dragmode="drawrect", newshape=dict(line_color="red"))
+        dragmode="drawrect",
+        newshape=dict(line_color="red"),
+        # Removes all default buttons in the modebar.
+        modebar_remove=[
+            "autoscale", "lasso", "pan", "reset", "select", "toImage",
+            "toggleHover", "toggleSpikelines", "togglehover",
+            "togglespikelines", "toimage", "zoom", "zoomin", "zoomout"
+        ],
+        # Disables annotations when hovering the image.
+        hovermode=False,
+    )
 
     left, right = st.columns(2)
 
