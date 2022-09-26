@@ -10,7 +10,7 @@ Internally, the implementation is done using the Svelte framework. This way, we 
 
 ## Example
 
-![example_app.gif](assets/example_app.gif)
+![example_app.gif](assets/image_carousel.gif)
 
 
 ## Development instructions

@@ -14,7 +14,7 @@ annotation or shape drawn in the plot and will return them in a dictionary.
 
 ## Example
 
-![example_app.gif](assets/example_app.gif)
+![example_app.gif](assets/event_handler.gif)
 
 
 ## Development instructions

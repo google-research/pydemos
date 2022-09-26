@@ -26,7 +26,7 @@ import streamlit_plotly_event_handler as speh
 
 
 # Get image as array
-example_image_url = "https://drscdn.500px.org/photo/1015160516/m%3D900/v2?sig=1fa24ede5b3aac0fde781edbe6de171deb506750b3e2dec887570efd08a6f596"
+example_image_url = "https://burst.shopifycdn.com/photos/dinner-party.jpg?width=925&format=pjpg&exif=1&iptc=1"
 image = np.array(imageio.imread(example_image_url))
 
 # Transform into a Plotly plot.

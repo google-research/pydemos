@@ -76,11 +76,28 @@ annotated_text.annotated_text(
 
 # Constant list of image URLs showcased in the carousels
 IMAGE_URL_LIST = [
-    "https://drscdn.500px.org/photo/1015160516/m%3D900/v2?sig=1fa24ede5b3aac0fde781edbe6de171deb506750b3e2dec887570efd08a6f596",
-    "https://upload.wikimedia.org/wikipedia/commons/2/23/Severin_Roesen_-_Still_Life_With_Fruit_%281850%29.jpg",
-    "https://cdn11.bigcommerce.com/s-vx5jp8mgcz/images/stencil/1280x1280/products/3235/3473/t_Severin_Roesen-Still_Life_with_Fruit__91757.1552437536.jpg?c=2",
-    "https://images.squarespace-cdn.com/content/v1/59725102f9a61ec71360e3af/1634736411085-K3CH8CNAL16E4BDQVW6A/Matthew-Bird_Country-Kitchen.jpg",
-    "https://blog-www.pods.com/wp-content/uploads/2020/07/Feature-Home-Office-GEtty-Resized.jpg"
+    ("https://burst.shopifycdn.com/photos/healthy-breakfast-time.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Sarah Pflug", "Burst Some Rights Reserved"),
+    ("https://cdn.magdeleine.co/wp-content/uploads/2021/05/StockSnap_DXLNXCCDGP.jpg",
+     "Photo by Lisa Fotios", "CC0"),
+    ("https://burst.shopifycdn.com/photos/musical-and-rustic-domestic-objects-inside-a-caravan.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Angelique Downing", "Burst Some Rights Reserved"),
+    ("https://burst.shopifycdn.com/photos/a-picture-reads-live-laugh-love-joined-by-random-objects.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Andréa Felsky Schmitt", "Burst Some Rights Reserved"),
+    ("https://burst.shopifycdn.com/photos/startup-desk.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "CC0"),
+    ("https://burst.shopifycdn.com/photos/office-wooden-desk-workspace.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "Burst Some Rights Reserved"),
+    ("https://burst.shopifycdn.com/photos/morning-journal.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "CC0"),
+    ("https://burst.shopifycdn.com/photos/bedroom-with-heart-pillows.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Shopify Partners", "Burst Some Rights Reserved"),
+    ("https://burst.shopifycdn.com/photos/comfortable-living-room-cat.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Brodie", "CC0"),
+    ("https://burst.shopifycdn.com/photos/yellow-pillow-bedside-table.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "CC0"),
+    ("https://burst.shopifycdn.com/photos/dinner-party.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "CC0"),
 ]
 
 

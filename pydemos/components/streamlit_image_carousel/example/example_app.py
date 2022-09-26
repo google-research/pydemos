@@ -25,11 +25,28 @@ from streamlit_image_carousel import image_carousel
 st.subheader("Image carousel component")
 
 image_url_list = [
-    "https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80",
-    "https://images.unsplash.com/photo-1610016302534-6f67f1c968d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1075&q=80",
-    "https://images.unsplash.com/photo-1516550893923-42d28e5677af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=872&q=80",
-    "https://images.unsplash.com/photo-1541343672885-9be56236302a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
-    "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+    ("https://burst.shopifycdn.com/photos/healthy-breakfast-time.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Sarah Pflug", "Burst Some Rights Reserved"),
+    ("https://cdn.magdeleine.co/wp-content/uploads/2021/05/StockSnap_DXLNXCCDGP.jpg",
+     "Photo by Lisa Fotios", "CC0"),
+    ("https://burst.shopifycdn.com/photos/musical-and-rustic-domestic-objects-inside-a-caravan.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Angelique Downing", "Burst Some Rights Reserved"),
+    ("https://burst.shopifycdn.com/photos/a-picture-reads-live-laugh-love-joined-by-random-objects.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Andréa Felsky Schmitt", "Burst Some Rights Reserved"),
+    ("https://burst.shopifycdn.com/photos/startup-desk.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "CC0"),
+    ("https://burst.shopifycdn.com/photos/office-wooden-desk-workspace.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "Burst Some Rights Reserved"),
+    ("https://burst.shopifycdn.com/photos/morning-journal.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "CC0"),
+    ("https://burst.shopifycdn.com/photos/bedroom-with-heart-pillows.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Shopify Partners", "Burst Some Rights Reserved"),
+    ("https://burst.shopifycdn.com/photos/comfortable-living-room-cat.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Brodie", "CC0"),
+    ("https://burst.shopifycdn.com/photos/yellow-pillow-bedside-table.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "CC0"),
+    ("https://burst.shopifycdn.com/photos/dinner-party.jpg?width=925&format=pjpg&exif=1&iptc=1",
+     "Photo by Matthew Henry", "CC0"),
 ]
 
 selectedImageUrl = image_carousel(
