@@ -5,22 +5,31 @@ on:
     branches: [ main ]
     paths:
       - 'pydemos/components/streamlit_image_carousel/streamlit_image_carousel/frontend/**'
+      - '.github/workflows/build_image_carousel.yml'
   pull_request:
     branches: [ main ]
     paths:
       - 'pydemos/components/streamlit_image_carousel/streamlit_image_carousel/frontend/**'
+      - '.github/workflows/build_image_carousel.yml'
+  # Allow to trigger the workflow manually (e.g. when deps changes)
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: pydemos/components/streamlit_image_carousel/src/streamlit_image_carousel/frontend
 
 jobs:
-  build:
+  build-image-carousel:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v3
-      - name: Setup node
+
+      # Install deps and build
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: cd pydemos/components/streamlit_image_carousel/src/streamlit_image_carousel/frontend
-      - run: npm ci
+      - run: node -v && npm -v
+      - run: npm i
       - run: npm run build
