@@ -78,7 +78,7 @@ def image_carousel(image_list: List[ImageAttributes],
       image_list=image_list,
       scroller_height=scroller_height,
       key=key,
-      default=image_list[index].url
+      default=image_list[index][0]
   )  # Default return value, image URL in position `index` of `image_list`.
 
   return component_value
