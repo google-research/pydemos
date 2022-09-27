@@ -33,3 +33,11 @@ jobs:
       - run: node -v && npm -v
       - run: npm i
       - run: npm run build
+
+      # Upload build files.
+      - uses: actions/upload-artifact@v3
+        with:
+          name: image-carousel-build-files
+          # Note: upload-artifact does not use default working-directory.
+          path: pydemos/components/streamlit_image_carousel/src/streamlit_image_carousel/frontend/public/build
+          if-no-files-found: error
