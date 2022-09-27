@@ -1,3 +1,4 @@
+alt-profanity-check==1.1.2
 clip@git+https://github.com/openai/CLIP.git@f69a9bc217f6df9213628848b3f9b0b6fc542401
 imageio==2.21.2
 plotly==5.10.0

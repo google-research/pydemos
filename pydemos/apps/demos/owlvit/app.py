@@ -25,6 +25,7 @@ from lib import paper
 from lib import plotting
 import numpy as np
 from PIL import Image
+import profanity_check
 from pydemos.components.streamlit_image_carousel.src import streamlit_image_carousel
 from pydemos.components.streamlit_plotly_event_handler.src import streamlit_plotly_event_handler
 import streamlit as st
@@ -136,6 +137,23 @@ def run_text_conditioned_demo() -> inference.Model:
           value=0.1,
           step=0.01,
           key="threshold_slider")
+
+    for query in text_input.split(","):
+      if profanity_check.predict([query]):
+        right.warning(
+            f"We cannot include the word \"{query}\" as it was flagged by the "
+            "[alt-profanity-check]"
+            "(https://pypi.org/project/alt-profanity-check/) "
+            "library; we understand this isn't a perfect solution, and if you "
+            "feel this word was erroneously blocked, feel free to contact us "
+            "using the following "
+            "[form link](https://forms.gle/71NP5Qgve1TiYWC37)."
+        )
+
+        # Since one of the queries contains a bad word, the chosen behavior
+        # is to not execute the demo at all, thus, we return the model and
+        # stop the demo.
+        return model
 
     with right:
       with st.spinner("Embedding image and queries..."):
