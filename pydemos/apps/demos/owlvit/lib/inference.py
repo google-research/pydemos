@@ -22,6 +22,8 @@ import dataclasses
 import functools
 from typing import Any, Dict, Tuple
 
+from . import model_wrapper_functions as demo_utils
+from . import numpy_array_hash
 from flax import linen as nn
 import jax
 import jax.numpy as jnp
@@ -47,6 +49,7 @@ class Model:
     config: ConfigDict with model configuration.
     module: OWL-ViT Flax module.
     variables: Variable dict to be used with module.apply.
+    carousel_image_embeddings: Precomputed embeddings for the carousel images.
   """
 
   config: ml_collections.ConfigDict
@@ -55,6 +58,7 @@ class Model:
 
   def __post_init__(self):
     self.module = self.module.bind(self.variables)
+    self.carousel_image_embeddings = demo_utils.get_carousel_image_embeddings()
 
   def __eq__(self, other):
     if isinstance(other, Model):
@@ -104,6 +108,10 @@ class Model:
       Numpy arrays containing image features, class embeddings, and predicted
       boxes.
     """
+    image_hash = numpy_array_hash.hash_array(image)
+    if image_hash in self.carousel_image_embeddings:
+      return self.carousel_image_embeddings[image_hash]
+
     image = self.preprocess_image(image)
     out = self._embed_image_jitted(image[None, ...])
     return jax.tree_util.tree_map(lambda x: np.array(x[0]), out)
