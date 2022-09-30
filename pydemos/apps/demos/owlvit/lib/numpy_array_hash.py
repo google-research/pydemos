@@ -28,11 +28,10 @@ def hash_array(arr: np.ndarray):
     Hashed numpy array.
   """
 
-  array_hash = hashlib.black2b(arr.tobytes(), digest_size=20)
+  array_hash = hashlib.sha256(arr.tobytes())
 
   # Adds array shape as part of the hash to be able to differentiate
   # transposed arrays and other transformations.
-  for dim in arr.shape:
-    array_hash.update(dim.tobytes(4, byteorder='big'))
+  array_hash.update(str(arr.shape).encode("utf-8"))
 
   return array_hash.digest()

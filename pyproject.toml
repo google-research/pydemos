@@ -33,6 +33,9 @@ dev = [
     "pytest-xdist",
     "pylint>=2.6.0",
     "yapf",
+    "scenic@git+https://github.com/google-research/scenic.git@a1e72b559881f29eb305372f5e4a7883808d0a4c",
+    "scikit-image",
+    "clip@git+https://github.com/openai/CLIP.git@f69a9bc217f6df9213628848b3f9b0b6fc542401",
 ]
 
 [build-system]

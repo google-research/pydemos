@@ -23,12 +23,11 @@ import functools
 import json
 from typing import Mapping, Union
 
-from . import inference
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
+from pydemos.apps.demos.owlvit.lib import inference
 from scenic.model_lib.base_models import box_utils
-import streamlit as st
 
 TEXT_INPUT_PY_CALLBACK_NAME = 'text_input_py_callback'
 IMAGE_CONDITIONING_PY_CALLBACK_NAME = 'text_input_py_callback'
@@ -56,13 +55,6 @@ def text_input_py_callback(comma_separated_queries: str, model: inference.Model,
   num_queries = len(queries)
 
   if num_queries > 8:
-    # Allows backslash continuation to be able to read and modify text in editor
-    # pylint: disable=g-backslash-continuation
-    st.warning('WARNING: The number of queries in the query text input is \
-               capped at 8 queries. \n Only the first 8 queries will be \
-               processed.')
-    # pylint: enable=g-backslash-continuation
-
     # Caps query number to have a certain number of differentiable colors
     # without repeating.
     queries = queries[:8]

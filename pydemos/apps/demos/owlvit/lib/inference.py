@@ -20,15 +20,16 @@ https://github.com/google-research/scenic/tree/main/scenic/projects/owl_vit.
 
 import dataclasses
 import functools
+import os
+import pickle
 from typing import Any, Dict, Tuple
 
-from . import model_wrapper_functions as demo_utils
-from . import numpy_array_hash
 from flax import linen as nn
 import jax
 import jax.numpy as jnp
 import ml_collections
 import numpy as np
+from pydemos.apps.demos.owlvit.lib import numpy_array_hash
 from scenic.model_lib.base_models import box_utils
 from scenic.projects.owl_vit.notebooks import numpy_cache
 from scipy import special as sp_special
@@ -37,6 +38,22 @@ import tensorflow as tf
 
 sigmoid = sp_special.expit  # Sigmoid is a more familiar name.
 QUERY_PAD_BIN_SIZE = 50
+
+
+def get_carousel_image_embeddings() -> Dict[str, Tuple[np.ndarray, ...]]:
+  """Gets image embeddings from a `carousel_image_embeddings.pck` file.
+
+  Returns:
+    Dictionary of image embeddings with the image hash as key and tuple of image
+    features, classe embeddings and predicted boxes as value.
+    Example of the structure:
+      {image_array_hash : (image_features, class_embeddings, predicted_boxes)}
+  """
+  if os.path.exists(r'carousel_image_embeddings.pck'):
+    image_embeddings = pickle.load(open(r'carousel_image_embeddings.pck', 'rb'))
+    return image_embeddings
+  else:
+    return {}
 
 
 @dataclasses.dataclass
@@ -58,7 +75,7 @@ class Model:
 
   def __post_init__(self):
     self.module = self.module.bind(self.variables)
-    self.carousel_image_embeddings = demo_utils.get_carousel_image_embeddings()
+    self.carousel_image_embeddings = get_carousel_image_embeddings()
 
   def __eq__(self, other):
     if isinstance(other, Model):

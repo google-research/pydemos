@@ -17,15 +17,13 @@
 Contains functions to load the model and apply it to text or image query.
 """
 
-import os
-import pickle
 from typing import Tuple
 
-from . import inference
-from . import interactive
-from . import plotting
 import numpy as np
 import plotly
+from pydemos.apps.demos.owlvit.lib import inference
+from pydemos.apps.demos.owlvit.lib import interactive
+from pydemos.apps.demos.owlvit.lib import plotting
 from scenic.projects.owl_vit import models
 from scenic.projects.owl_vit.configs import clip_b16 as config_module
 import streamlit as st
@@ -51,23 +49,6 @@ def load_model() -> inference.Model:
   model.warm_up()
 
   return model
-
-
-@st.experimental_singleton(show_spinner=False)
-def get_carousel_image_embeddings() -> dict[str, Tuple[np.ndarray, ...]]:
-  """Gets image embeddings from a `carousel_image_embeddings.pck` file.
-
-  Returns:
-    Dictionary of image embeddings with the image hash as key and tuple of image
-    features, classe embeddings and predicted boxes as value.
-    Example of the structure:
-      {image_array_hash : (image_features, class_embeddings, predicted_boxes)}
-  """
-  if os.path.exists(r'carousel_image_embeddings.pck'):
-    image_embeddings = pickle.load(open(r'carousel_image_embeddings.pck', 'rb'))
-    return image_embeddings
-  else:
-    return {}
 
 
 def apply_model_to_text_query(
