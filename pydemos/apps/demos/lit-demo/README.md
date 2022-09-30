@@ -7,6 +7,7 @@ Last update tested using **Python 3.10.5**.
 
 ### Option 1: Manual demo build
 
+
 1.  Setup virtual environment.
 
     ```sh
