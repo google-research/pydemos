@@ -17,7 +17,7 @@
 import jax
 import jax.numpy as jnp
 import numpy as np
-import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 from vit_jax import models
 
@@ -113,15 +113,17 @@ def get_top5(probs, classnames):
   clean_probs = []
   for i in range(len(probs)):
     clean_probs.append(probs[i][0])  # Workaround to delete intermediate lists
-  index_top5 = np.argpartition(clean_probs, -5)[-5:]
+  index_top5 = np.argsort(clean_probs, -5)[-5:]
   x = []
   y = []
   for index in index_top5:
     x.append(float(round(clean_probs[index] * 100, 2)))
     y.append(classnames[index])
 
-  fig = px.bar(x=x, y=y, orientation='h')
-
+  fig = go.Figure(data=[go.Bar(x=x, y=y, orientation='h', text=x)])
+  fig.update_traces(
+      marker_color='rgb(158,202,225)', marker_line_color='rgb(8,48,107)',
+      marker_line_width=1.5, opacity=0.6)
   return fig
 
 
