@@ -21,9 +21,9 @@ from typing import Tuple
 
 import numpy as np
 import plotly
-from pydemos.apps.demos.owlvit.lib import inference
-from pydemos.apps.demos.owlvit.lib import interactive
-from pydemos.apps.demos.owlvit.lib import plotting
+from pydemos.apps.demos.owl_vit.lib import inference
+from pydemos.apps.demos.owl_vit.lib import interactive
+from pydemos.apps.demos.owl_vit.lib import plotting
 from scenic.projects.owl_vit import models
 from scenic.projects.owl_vit.configs import clip_b16 as config_module
 import streamlit as st

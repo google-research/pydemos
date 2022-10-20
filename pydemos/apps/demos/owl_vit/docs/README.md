@@ -50,11 +50,11 @@ Last update tested using:
 1.  Build image from the source directory.
 
     ```sh
-    docker build -t owlvit-demo .
+    docker build -t owl-vit-demo .
     ```
 
 2.  Run it on localhost
 
     ```sh
-    docker run --network="host" owlvit-demo
+    docker run --network="host" owl-vit-demo
     ```
