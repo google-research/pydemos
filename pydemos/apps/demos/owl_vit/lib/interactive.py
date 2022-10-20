@@ -26,7 +26,7 @@ from typing import Mapping, Union
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
-from pydemos.apps.demos.owlvit.lib import inference
+from pydemos.apps.demos.owl_vit.lib import inference
 from scenic.model_lib.base_models import box_utils
 
 TEXT_INPUT_PY_CALLBACK_NAME = 'text_input_py_callback'
