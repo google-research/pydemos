@@ -29,7 +29,7 @@ import jax
 import jax.numpy as jnp
 import ml_collections
 import numpy as np
-from pydemos.apps.demos.owlvit.lib import numpy_array_hash
+from pydemos.apps.demos.owl_vit.lib import numpy_array_hash
 from scenic.model_lib.base_models import box_utils
 from scenic.projects.owl_vit.notebooks import numpy_cache
 from scipy import special as sp_special

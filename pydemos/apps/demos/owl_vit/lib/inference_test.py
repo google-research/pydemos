@@ -21,7 +21,7 @@ import chex
 import jax
 import jax.numpy as jnp
 import numpy as np
-from pydemos.apps.demos.owlvit.lib import inference
+from pydemos.apps.demos.owl_vit.lib import inference
 from scenic.projects.owl_vit import models
 from scenic.projects.owl_vit.configs import clip_b32
 
