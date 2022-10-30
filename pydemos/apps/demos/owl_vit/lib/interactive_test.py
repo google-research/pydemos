@@ -18,7 +18,7 @@ from unittest import mock
 
 from absl.testing import absltest
 import numpy as np
-from pydemos.apps.demos.owlvit.lib import interactive
+from pydemos.apps.demos.owl_vit.lib import interactive
 
 
 def _mock_tokenize(text, max_len):
