@@ -1,4 +1,4 @@
-# Copyright 2023 The pydemos Authors.
+# Copyright 2024 The pydemos Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -270,54 +270,143 @@ def references():
   st.subheader('References')
   with st.expander('Expand'):
     st.markdown(
-        '<p align="justify"><ol type="1">\
-<li>Arnab, A., Dehghani, M., Heigold, G., Sun, C., Luˇci´c, M., Schmid, C.: ViViT: A video vision transformer. In: ICCV. pp. 6836–6846 (October 2021)</li>\
-<li>Bansal, A., Sikka, K., Sharma, G., Chellappa, R., Divakaran, A.: Zero-shot object detection. In: ECCV (September 2018)</li>\
-<li>Bello, I., Fedus, W., Du, X., Cubuk, E.D., Srinivas, A., Lin, T.Y., Shlens, J., Zoph, B.: Revisiting ResNets: Improved training and scaling strategies. NeurIPS <b>34</b> (2021)</li>\
-<li>Biswas, S.K., Milanfar, P.: One shot detection with laplacian object and fast matrix cosine similarity. IEEE Transactions on Pattern Analysis and Machine Intelligence <b>38</b>(3), 546–562 (2016)</li>\
-<li>Bradbury, J., Frostig, R., Hawkins, P., Johnson, M.J., Leary, C., Maclaurin, D., Necula, G., Paszke, A., VanderPlas, J., Wanderman-Milne, S., Zhang, Q.: JAX: composable transformations of Python+NumPy programs (2018), http://github.com/google/jax</li>\
-<li>Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., Zagoruyko, S.: End-to-end object detection with transformers. In: ECCV. pp. 213–229. Springer International Publishing, Cham (2020)</li>\
-<li>Chen, D.J., Hsieh, H.Y., Liu, T.L.: Adaptive image transformer for one-shot object detection. In: CVPR. pp. 12242–12251 (2021)</li>\
-<li>Dehghani, M., Gritsenko, A.A., Arnab, A., Minderer, M., Tay, Y.: SCENIC: A JAX library for computer vision research and beyond. arXiv preprint arXiv:2110.11403 (2021)</li>\
-<li>Fang, Y., Liao, B., Wang, X., Fang, J., Qi, J., Wu, R., Niu, J., Liu, W.: You only look at one sequence: Rethinking transformer in vision through object detection. In: NeurIPS. vol. 34 (2021)</li>\
-<li>Frome, A., Corrado, G.S., Shlens, J., Bengio, S., Dean, J., Ranzato, M., Mikolov, T.: Devise: A deep visual-semantic embedding model. In: NeurIPS. vol. 26 (2013)</li>\
-<li>Ghiasi, G., Cui, Y., Srinivas, A., Qian, R., Lin, T.Y., Cubuk, E.D., Le, Q.V., Zoph, B.: Simple copy-paste is a strong data augmentation method for instance segmentation. In: CVPR. pp. 2918–2928 (2021)</li>\
-<li>Gu, X., Lin, T.Y., Kuo, W., Cui, Y.: Open-vocabulary object detection via vision and language knowledge distillation. arXiv preprint arXiv:2104.13921 (2021)</li>\
-<li>Gupta, A., Dollar, P., Girshick, R.: LVIS: A dataset for large vocabulary instance segmentation. In: CVPR (June 2019)</li>\
-<li>He, K., Gkioxari, G., Dollar, P., Girshick, R.: Mask R-CNN. In: ICCV (2017)</li>\
-<li>He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition. In: CVPR (June 2016)</li>\
-<li>Hsieh, T.I., Lo, Y.C., Chen, H.T., Liu, T.L.: One-shot object detection with coattention and co-excitation. In: NeurIPS. vol. 32. Curran Associates, Inc. (2019)</li>\
-<li>Huang, G., Sun, Y., Liu, Z., Sedra, D., Weinberger, K.Q.: Deep networks with stochastic depth. In: ECCV. pp. 646–661. Springer International Publishing, Cham (2016)</li>\
-<li>Huang, Z., Zeng, Z., Liu, B., Fu, D., Fu, J.: Pixel-BERT: Aligning image pixels with text by deep multi-modal transformers. arXiv preprint arXiv:2004.00849 (2020)</li>\
-<li>Jia, C., Yang, Y., Xia, Y., Chen, Y.T., Parekh, Z., Pham, H., Le, Q., Sung, Y.H., Li, Z., Duerig, T.: Scaling up visual and vision-language representation learning with noisy text supervision. In: ICML. vol. 139, pp. 4904–4916. PMLR (2021)</li>\
-<li>Kamath, A., Singh, M., LeCun, Y., Synnaeve, G., Misra, I., Carion, N.: MDETR - modulated detection for end-to-end multi-modal understanding. In: ICCV. pp. 1780–1790 (2021)</li>\
-<li>Kolesnikov, A., Beyer, L., Zhai, X., Puigcerver, J., Yung, J., Gelly, S., Houlsby, N.: Big transfer (BiT): General visual representation learning. In: ECCV. pp. 491–507. Springer International Publishing, Cham (2020)</li>\
-<li>Kolesnikov, A., Dosovitskiy, A., Weissenborn, D., Heigold, G., Uszkoreit, J., Beyer, L., Minderer, M., Dehghani, M., Houlsby, N., Gelly, S., Unterthiner, T., Zhai, X.: An image is worth 16x16 words: Transformers for image recognition at scale. In: ICLR (2021)</li>\
-<li>Krishna, R., Zhu, Y., Groth, O., Johnson, J., Hata, K., Kravitz, J., Chen, S., Kalantidis, Y., Li, L.J., Shamma, D.A., et al.: Visual genome: Connecting language and vision using crowdsourced dense image annotations. International journal of computer vision 123(1), 32–73 (2017)</li>\
-<li>Kuznetsova, A., Rom, H., Alldrin, N., Uijlings, J., Krasin, I., Pont-Tuset, J., Kamali, S., Popov, S., Malloci, M., Kolesnikov, A., Duerig, T., Ferrari, V.: The Open Images Dataset V4. International Journal of Computer Vision 128(7), 1956–1981 (Mar 2020)</li>\
-<li>Lee, J., Lee, Y., Kim, J., Kosiorek, A.R., Choi, S., Teh, Y.W.: Set transformer: A framework for attention-based permutation-invariant neural networks. In: ICML. Proceedings of Machine Learning Research, vol. 97, pp. 3744–3753. PMLR (2019)</li>\
-<li>Li, L.H., Zhang, P., Zhang, H., Yang, J., Li, C., Zhong, Y., Wang, L., Yuan, L., Zhang, L., Hwang, J.N., et al.: Grounded language-image pre-training. arXiv preprint arXiv:2112.03857 (2021)</li>\
-<li>Lin, T.Y., Maire, M., Belongie, S., Hays, J., Perona, P., Ramanan, D., Doll´ar, P., Zitnick, C.L.: Microsoft COCO: Common objects in context. In: ECCV. pp. 740–755. Springer International Publishing, Cham (2014)</li>\
-<li>Liu, W., Anguelov, D., Erhan, D., Szegedy, C., Reed, S., Fu, C.Y., Berg, A.C.: SSD: Single shot multibox detector. In: ECCV. pp. 21–37. Springer International Publishing, Cham (2016)</li>\
-<li>Mahajan, D., Girshick, R., Ramanathan, V., He, K., Paluri, M., Li, Y., Bharambe, A., van der Maaten, L.: Exploring the limits of weakly supervised pretraining. In: ECCV. pp. 185–201. Springer International Publishing, Cham (2018)</li>\
-<li>Michaelis, C., Ustyuzhaninov, I., Bethge, M., Ecker, A.S.: One-shot instance segmentation. arXiv preprint arXiv:1811.11507 (2018)</li>\
-<li>Osokin, A., Sumin, D., Lomakin, V.: OS2D: One-stage one-shot object detection by matching anchor features. In: ECCV. pp. 635–652. Springer International Publishing, Cham (2020)</li>\
-<li>Pham, H., Dai, Z., Ghiasi, G., Liu, H., Yu, A.W., Luong, M.T., Tan, M., Le, Q.V.: Combined scaling for zero-shot transfer learning. arXiv preprint arXiv:2111.10050 (2021)</li>\
-<li>Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., Krueger, G., Sutskever, I.: Learning transferable visual models from natural language supervision. In: ICML. vol. 139, pp. 8748– 8763. PMLR (18–24 Jul 2021)</li>\
-<li>Ren, S., He, K., Girshick, R., Sun, J.: Faster R-CNN: Towards real-time object detection with region proposal networks. In: NeurIPS. vol. 28. Curran Associates, Inc. (2015)</li>\
-<li>Shao, S., Li, Z., Zhang, T., Peng, C., Yu, G., Zhang, X., Li, J., Sun, J.: Objects365: A Large-Scale, High-Quality Dataset for Object Detection. In: ICCV. pp. 8429– 8438 (2019)</li>\
-<li>Socher, R., Ganjoo, M., Manning, C.D., Ng, A.: Zero-shot learning through crossmodal transfer. NeurIPS 26 (2013)</li>\
-<li>Song, H., Sun, D., Chun, S., Jampani, V., Han, D., Heo, B., Kim, W., Yang, M.H.: ViDT: An efficient and effective fully transformer-based object detector. In: ICLR (2022)</li>\
-<li>Steiner, A., Kolesnikov, A., Zhai, X., Wightman, R., Uszkoreit, J., Beyer, L.: How to train your ViT? data, augmentation, and regularization in vision transformers. arXiv preprint arXiv:2106.10270 (2021)</li>\
-<li>Touvron, H., Cord, M., Douze, M., Massa, F., Sablayrolles, A., Jegou, H.: Training data-efficient image transformers and distillation through attention. In: ICML. vol. 139, pp. 10347–10357 (July 2021)</li>\
-<li>Xian, Y., Lampert, C.H., Schiele, B., Akata, Z.: Zero-shot learning—a comprehensive evaluation of the good, the bad and the ugly. IEEE transactions on pattern analysis and machine intelligence 41(9), 2251–2265 (2018)</li>\
-<li>Yao, Z., Ai, J., Li, B., Zhang, C.: Efficient detr: improving end-to-end object detector with dense prior. arXiv preprint arXiv:2104.01318 (2021)</li>\
-<li>Zareian, A., Rosa, K.D., Hu, D.H., Chang, S.F.: Open-vocabulary object detection using captions. In: CVPR. pp. 14393–14402 (June 2021)</li>\
-<li>Zhai, X., Kolesnikov, A., Houlsby, N., Beyer, L.: Scaling vision transformers. arXiv preprint arXiv:2106.04560 (2021)</li>\
-<li>Zhai, X., Wang, X., Mustafa, B., Steiner, A., Keysers, D., Kolesnikov, A., Beyer, L.: LiT: Zero-shot transfer with locked-image text tuning. arXiv preprint arXiv:2111.07991 (2021)</li>\
-<li>Zhong, Y., Yang, J., Zhang, P., Li, C., Codella, N., Li, L.H., Zhou, L., Dai, X., Yuan, L., Li, Y., et al.: RegionCLIP: Region-based language-image pretraining. arXiv preprint arXiv:2112.09106 (2021)</li>\
-<li>Zhou, X., Girdhar, R., Joulin, A., Kr¨ahenb¨uhl, P., Misra, I.: Detecting twentythousand classes using image-level supervision. In: arXiv preprint arXiv:2201.02605 (2021)</li>\
-<li>Zhou, X., Koltun, V., Kr¨ahenb¨uhl, P.: Probabilistic two-stage detection. arXiv preprint arXiv:2103.07461 (2021)</li>\
-<li>Zhu, X., Su, W., Lu, L., Li, B., Wang, X., Dai, J.: Deformable DETR: Deformable transformers for end-to-end object detection. In: ICLR (2021)</li>\
-</p>',
-        unsafe_allow_html=True)
+        '<p align="justify"><ol type="1"><li>Arnab, A., Dehghani, M., Heigold,'
+        ' G., Sun, C., Luˇci´c, M., Schmid, C.: ViViT: A video vision'
+        ' transformer. In: ICCV. pp. 6836–6846 (October 2021)</li><li>Bansal,'
+        ' A., Sikka, K., Sharma, G., Chellappa, R., Divakaran, A.: Zero-shot'
+        ' object detection. In: ECCV (September 2018)</li><li>Bello, I., Fedus,'
+        ' W., Du, X., Cubuk, E.D., Srinivas, A., Lin, T.Y., Shlens, J., Zoph,'
+        ' B.: Revisiting ResNets: Improved training and scaling strategies.'
+        ' NeurIPS <b>34</b> (2021)</li><li>Biswas, S.K., Milanfar, P.: One shot'
+        ' detection with laplacian object and fast matrix cosine similarity.'
+        ' IEEE Transactions on Pattern Analysis and Machine Intelligence'
+        ' <b>38</b>(3), 546–562 (2016)</li><li>Bradbury, J., Frostig, R.,'
+        ' Hawkins, P., Johnson, M.J., Leary, C., Maclaurin, D., Necula, G.,'
+        ' Paszke, A., VanderPlas, J., Wanderman-Milne, S., Zhang, Q.: JAX:'
+        ' composable transformations of Python+NumPy programs (2018),'
+        ' http://github.com/jax-ml/jax</li><li>Carion, N., Massa, F., Synnaeve,'
+        ' G., Usunier, N., Kirillov, A., Zagoruyko, S.: End-to-end object'
+        ' detection with transformers. In: ECCV. pp. 213–229. Springer'
+        ' International Publishing, Cham (2020)</li><li>Chen, D.J., Hsieh,'
+        ' H.Y., Liu, T.L.: Adaptive image transformer for one-shot object'
+        ' detection. In: CVPR. pp. 12242–12251 (2021)</li><li>Dehghani, M.,'
+        ' Gritsenko, A.A., Arnab, A., Minderer, M., Tay, Y.: SCENIC: A JAX'
+        ' library for computer vision research and beyond. arXiv preprint'
+        ' arXiv:2110.11403 (2021)</li><li>Fang, Y., Liao, B., Wang, X., Fang,'
+        ' J., Qi, J., Wu, R., Niu, J., Liu, W.: You only look at one sequence:'
+        ' Rethinking transformer in vision through object detection. In:'
+        ' NeurIPS. vol. 34 (2021)</li><li>Frome, A., Corrado, G.S., Shlens, J.,'
+        ' Bengio, S., Dean, J., Ranzato, M., Mikolov, T.: Devise: A deep'
+        ' visual-semantic embedding model. In: NeurIPS. vol. 26'
+        ' (2013)</li><li>Ghiasi, G., Cui, Y., Srinivas, A., Qian, R., Lin,'
+        ' T.Y., Cubuk, E.D., Le, Q.V., Zoph, B.: Simple copy-paste is a strong'
+        ' data augmentation method for instance segmentation. In: CVPR. pp.'
+        ' 2918–2928 (2021)</li><li>Gu, X., Lin, T.Y., Kuo, W., Cui, Y.:'
+        ' Open-vocabulary object detection via vision and language knowledge'
+        ' distillation. arXiv preprint arXiv:2104.13921 (2021)</li><li>Gupta,'
+        ' A., Dollar, P., Girshick, R.: LVIS: A dataset for large vocabulary'
+        ' instance segmentation. In: CVPR (June 2019)</li><li>He, K., Gkioxari,'
+        ' G., Dollar, P., Girshick, R.: Mask R-CNN. In: ICCV (2017)</li><li>He,'
+        ' K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image'
+        ' recognition. In: CVPR (June 2016)</li><li>Hsieh, T.I., Lo, Y.C.,'
+        ' Chen, H.T., Liu, T.L.: One-shot object detection with coattention and'
+        ' co-excitation. In: NeurIPS. vol. 32. Curran Associates, Inc.'
+        ' (2019)</li><li>Huang, G., Sun, Y., Liu, Z., Sedra, D., Weinberger,'
+        ' K.Q.: Deep networks with stochastic depth. In: ECCV. pp. 646–661.'
+        ' Springer International Publishing, Cham (2016)</li><li>Huang, Z.,'
+        ' Zeng, Z., Liu, B., Fu, D., Fu, J.: Pixel-BERT: Aligning image pixels'
+        ' with text by deep multi-modal transformers. arXiv preprint'
+        ' arXiv:2004.00849 (2020)</li><li>Jia, C., Yang, Y., Xia, Y., Chen,'
+        ' Y.T., Parekh, Z., Pham, H., Le, Q., Sung, Y.H., Li, Z., Duerig, T.:'
+        ' Scaling up visual and vision-language representation learning with'
+        ' noisy text supervision. In: ICML. vol. 139, pp. 4904–4916. PMLR'
+        ' (2021)</li><li>Kamath, A., Singh, M., LeCun, Y., Synnaeve, G., Misra,'
+        ' I., Carion, N.: MDETR - modulated detection for end-to-end'
+        ' multi-modal understanding. In: ICCV. pp. 1780–1790'
+        ' (2021)</li><li>Kolesnikov, A., Beyer, L., Zhai, X., Puigcerver, J.,'
+        ' Yung, J., Gelly, S., Houlsby, N.: Big transfer (BiT): General visual'
+        ' representation learning. In: ECCV. pp. 491–507. Springer'
+        ' International Publishing, Cham (2020)</li><li>Kolesnikov, A.,'
+        ' Dosovitskiy, A., Weissenborn, D., Heigold, G., Uszkoreit, J., Beyer,'
+        ' L., Minderer, M., Dehghani, M., Houlsby, N., Gelly, S., Unterthiner,'
+        ' T., Zhai, X.: An image is worth 16x16 words: Transformers for image'
+        ' recognition at scale. In: ICLR (2021)</li><li>Krishna, R., Zhu, Y.,'
+        ' Groth, O., Johnson, J., Hata, K., Kravitz, J., Chen, S., Kalantidis,'
+        ' Y., Li, L.J., Shamma, D.A., et al.: Visual genome: Connecting'
+        ' language and vision using crowdsourced dense image annotations.'
+        ' International journal of computer vision 123(1), 32–73'
+        ' (2017)</li><li>Kuznetsova, A., Rom, H., Alldrin, N., Uijlings, J.,'
+        ' Krasin, I., Pont-Tuset, J., Kamali, S., Popov, S., Malloci, M.,'
+        ' Kolesnikov, A., Duerig, T., Ferrari, V.: The Open Images Dataset V4.'
+        ' International Journal of Computer Vision 128(7), 1956–1981 (Mar'
+        ' 2020)</li><li>Lee, J., Lee, Y., Kim, J., Kosiorek, A.R., Choi, S.,'
+        ' Teh, Y.W.: Set transformer: A framework for attention-based'
+        ' permutation-invariant neural networks. In: ICML. Proceedings of'
+        ' Machine Learning Research, vol. 97, pp. 3744–3753. PMLR'
+        ' (2019)</li><li>Li, L.H., Zhang, P., Zhang, H., Yang, J., Li, C.,'
+        ' Zhong, Y., Wang, L., Yuan, L., Zhang, L., Hwang, J.N., et al.:'
+        ' Grounded language-image pre-training. arXiv preprint arXiv:2112.03857'
+        ' (2021)</li><li>Lin, T.Y., Maire, M., Belongie, S., Hays, J., Perona,'
+        ' P., Ramanan, D., Doll´ar, P., Zitnick, C.L.: Microsoft COCO: Common'
+        ' objects in context. In: ECCV. pp. 740–755. Springer International'
+        ' Publishing, Cham (2014)</li><li>Liu, W., Anguelov, D., Erhan, D.,'
+        ' Szegedy, C., Reed, S., Fu, C.Y., Berg, A.C.: SSD: Single shot'
+        ' multibox detector. In: ECCV. pp. 21–37. Springer International'
+        ' Publishing, Cham (2016)</li><li>Mahajan, D., Girshick, R.,'
+        ' Ramanathan, V., He, K., Paluri, M., Li, Y., Bharambe, A., van der'
+        ' Maaten, L.: Exploring the limits of weakly supervised pretraining.'
+        ' In: ECCV. pp. 185–201. Springer International Publishing, Cham'
+        ' (2018)</li><li>Michaelis, C., Ustyuzhaninov, I., Bethge, M., Ecker,'
+        ' A.S.: One-shot instance segmentation. arXiv preprint arXiv:1811.11507'
+        ' (2018)</li><li>Osokin, A., Sumin, D., Lomakin, V.: OS2D: One-stage'
+        ' one-shot object detection by matching anchor features. In: ECCV. pp.'
+        ' 635–652. Springer International Publishing, Cham (2020)</li><li>Pham,'
+        ' H., Dai, Z., Ghiasi, G., Liu, H., Yu, A.W., Luong, M.T., Tan, M., Le,'
+        ' Q.V.: Combined scaling for zero-shot transfer learning. arXiv'
+        ' preprint arXiv:2111.10050 (2021)</li><li>Radford, A., Kim, J.W.,'
+        ' Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell,'
+        ' A., Mishkin, P., Clark, J., Krueger, G., Sutskever, I.: Learning'
+        ' transferable visual models from natural language supervision. In:'
+        ' ICML. vol. 139, pp. 8748– 8763. PMLR (18–24 Jul 2021)</li><li>Ren,'
+        ' S., He, K., Girshick, R., Sun, J.: Faster R-CNN: Towards real-time'
+        ' object detection with region proposal networks. In: NeurIPS. vol. 28.'
+        ' Curran Associates, Inc. (2015)</li><li>Shao, S., Li, Z., Zhang, T.,'
+        ' Peng, C., Yu, G., Zhang, X., Li, J., Sun, J.: Objects365: A'
+        ' Large-Scale, High-Quality Dataset for Object Detection. In: ICCV. pp.'
+        ' 8429– 8438 (2019)</li><li>Socher, R., Ganjoo, M., Manning, C.D., Ng,'
+        ' A.: Zero-shot learning through crossmodal transfer. NeurIPS 26'
+        ' (2013)</li><li>Song, H., Sun, D., Chun, S., Jampani, V., Han, D.,'
+        ' Heo, B., Kim, W., Yang, M.H.: ViDT: An efficient and effective fully'
+        ' transformer-based object detector. In: ICLR (2022)</li><li>Steiner,'
+        ' A., Kolesnikov, A., Zhai, X., Wightman, R., Uszkoreit, J., Beyer, L.:'
+        ' How to train your ViT? data, augmentation, and regularization in'
+        ' vision transformers. arXiv preprint arXiv:2106.10270'
+        ' (2021)</li><li>Touvron, H., Cord, M., Douze, M., Massa, F.,'
+        ' Sablayrolles, A., Jegou, H.: Training data-efficient image'
+        ' transformers and distillation through attention. In: ICML. vol. 139,'
+        ' pp. 10347–10357 (July 2021)</li><li>Xian, Y., Lampert, C.H., Schiele,'
+        ' B., Akata, Z.: Zero-shot learning—a comprehensive evaluation of the'
+        ' good, the bad and the ugly. IEEE transactions on pattern analysis and'
+        ' machine intelligence 41(9), 2251–2265 (2018)</li><li>Yao, Z., Ai, J.,'
+        ' Li, B., Zhang, C.: Efficient detr: improving end-to-end object'
+        ' detector with dense prior. arXiv preprint arXiv:2104.01318'
+        ' (2021)</li><li>Zareian, A., Rosa, K.D., Hu, D.H., Chang, S.F.:'
+        ' Open-vocabulary object detection using captions. In: CVPR. pp.'
+        ' 14393–14402 (June 2021)</li><li>Zhai, X., Kolesnikov, A., Houlsby,'
+        ' N., Beyer, L.: Scaling vision transformers. arXiv preprint'
+        ' arXiv:2106.04560 (2021)</li><li>Zhai, X., Wang, X., Mustafa, B.,'
+        ' Steiner, A., Keysers, D., Kolesnikov, A., Beyer, L.: LiT: Zero-shot'
+        ' transfer with locked-image text tuning. arXiv preprint'
+        ' arXiv:2111.07991 (2021)</li><li>Zhong, Y., Yang, J., Zhang, P., Li,'
+        ' C., Codella, N., Li, L.H., Zhou, L., Dai, X., Yuan, L., Li, Y., et'
+        ' al.: RegionCLIP: Region-based language-image pretraining. arXiv'
+        ' preprint arXiv:2112.09106 (2021)</li><li>Zhou, X., Girdhar, R.,'
+        ' Joulin, A., Kr¨ahenb¨uhl, P., Misra, I.: Detecting twentythousand'
+        ' classes using image-level supervision. In: arXiv preprint'
+        ' arXiv:2201.02605 (2021)</li><li>Zhou, X., Koltun, V., Kr¨ahenb¨uhl,'
+        ' P.: Probabilistic two-stage detection. arXiv preprint'
+        ' arXiv:2103.07461 (2021)</li><li>Zhu, X., Su, W., Lu, L., Li, B.,'
+        ' Wang, X., Dai, J.: Deformable DETR: Deformable transformers for'
+        ' end-to-end object detection. In: ICLR (2021)</li></p>',
+        unsafe_allow_html=True,
+    )
